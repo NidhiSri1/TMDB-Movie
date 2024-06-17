@@ -4,8 +4,15 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
 export default function FilterDate(props) {
-  const { handleSort, filterText, anchorEl, open, handleClick, handleClose } =
-    props;
+  const {
+    handleSort,
+    filterText,
+    anchorEl,
+    open,
+    handleClick,
+    handleClose,
+    sortValue,
+  } = props;
 
   return (
     <div>
@@ -30,6 +37,7 @@ export default function FilterDate(props) {
         {filterText.map((text) => {
           return (
             <MenuItem
+              selected={text === sortValue}
               key={text}
               data-testid={`menu-item-${text}`}
               onClick={() => handleSort(text)}

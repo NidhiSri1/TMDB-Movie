@@ -86,6 +86,7 @@ function MoviesList() {
           open={open}
           handleClick={handleClick}
           handleClose={handleClose}
+          sortValue={sortValue}
         />
       </Grid>
       <Grid
