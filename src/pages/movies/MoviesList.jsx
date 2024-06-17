@@ -46,7 +46,8 @@ function MoviesList() {
     setAnchorEl(null);
   };
 
-  const handleChange = (value) => {
+  const handleChange = (event, value) => {
+    console.log("aassfsfadf", value);
     setPage(value);
   };
 
